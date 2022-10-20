@@ -1,0 +1,44 @@
+.animation {
+    position: relative;
+    width: 380px;
+    height: 517px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.animation::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 140%;
+    background: linear-gradient( #FE0FE3, #FE0FE3);
+    animation: animate 5s linear infinite;
+}
+
+.animation::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    background: #070b12;
+    border-radius: 10px;
+}
+
+.animation .card {
+    position: relative;
+    z-index: 5;
+}
+
+@keyframes animate {
+    0%
+    {
+        transform: rotate(0deg);
+    }
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
